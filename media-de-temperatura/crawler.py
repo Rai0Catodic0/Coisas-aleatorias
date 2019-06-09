@@ -5,7 +5,7 @@ import time
 
 # criando arquivo csv pra armazenar os dados da tabela
 tabela = open('temperaturas.csv', 'w')
-tabela.write('dia;temperatura maxima; temperatura minima \n')
+tabela.write('dia,temperatura maxima, temperatura minima \n')
 # requisição do html do clima tempo
 r = requests.get('https://www.climatempo.com.br/previsao-do-tempo/cidade/558/saopaulo-sp')
 texto = r.text
@@ -25,7 +25,7 @@ def acha_temperatura():
 
 def salva_temp(temp_min, temp_max):
     data = time.localtime()  # data do dia
-    tabela.write(str(data[2])+';'+temp_min+';'+temp_max+'\n')
+    tabela.write(str(data[2])+','+temp_min+','+temp_max+'\n')
 
 
 temp = acha_temperatura()
