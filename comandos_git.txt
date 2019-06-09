@@ -1,3 +1,12 @@
 git add 'nome do arquivo'
 git commit - m 'mensagem qualquer' // atualiza o git
 git push origin master //adiciona ao repositorio e a branch principal
+git diff mostra a mudança reaçizada
+git log
+git chekcout 'nome do arquivo' retorna o arquivo para a versao anterior antes do git add
+git reset HEAD 'nome do arquivo' tira o arquivo do unstaged
+git reset tres tipos:
+      --soft pega as modificações e volta pra unstaged
+      --mixed volta os arquivos pra antes do unstaged
+      --hard ignora tudo
+      
